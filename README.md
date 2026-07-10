@@ -1,7 +1,7 @@
 
 <h1> 🍽️ CampusBites </h1>
     
-*Building a smarter and more efficient campus dining experience.*
+>*Building a smarter and more efficient campus dining experience.*
 
 `Academic Mini Project` | `5th Semester`
 
@@ -107,7 +107,7 @@ The application currently uses an **in-memory JavaScript data store**, where men
 
 ## 🎥 Demo
 
-> **Demo Video:** **
+> **Demo Video:** https://youtu.be/9dTsCFINOH8?si=tzx9e1uqKykAFE4w 
 
 ---
 
@@ -116,10 +116,9 @@ The application currently uses an **in-memory JavaScript data store**, where men
 As part of the development team, my contributions included:
 
 * Developing responsive frontend interfaces using React and Tailwind CSS.
-* Implementing menu browsing, cart management, and checkout functionality.
 * Managing application state using React Context API.
-* Participating in testing, debugging, and overall application integration.
-
+* Developed reusable and maintainable UI components.
+* Implementing menu browsing, cart management, and checkout functionality.
 ---
 
 ## 👥 Team Project
