@@ -1,87 +1,134 @@
-# CampusBites — Canteen Ordering System
 
-A full-stack MERN-style web app for ordering food on campus. Students browse
-the menu, add items to a cart, check out, and track their order. Canteen
-staff manage the menu and update order status from a simple admin dashboard.
+<h1> 🍽️ CampusBites </h1>
+    
+*Building a smarter and more efficient campus dining experience.*
 
-Rebuilt from the original project report, with the described feature set
-(menu, cart, checkout, order history, admin) fully implemented.
+`Academic Mini Project` | `5th Semester`
 
-## Stack
 
-- **Frontend:** React 18 + Vite, Tailwind CSS, React Router, Axios, lucide-react icons
-- **Backend:** Node.js + Express (in-memory data store — see note below)
+---
 
-## Project structure
+## ✨ Features
 
-```
+| 👨‍🎓 Student Experience | 👨‍🍳 Admin Dashboard   |
+| ------------------------ | ----------------------- |
+| 🍽️ Browse menu          | 🔐 Secure admin access  |
+| 🔍 Search & filter items | ➕ Add menu items        |
+| 🛒 Manage shopping cart  | ✏️ Edit menu items      |
+| ➕ Update quantities      | 🗑️ Delete menu items   |
+| ✅ Checkout orders        | 📦 View customer orders |
+| 📜 Order history         | 🔄 Update order status  |
+
+
+---
+
+## 🛠️ Tech Stack
+
+| Category         | Technologies                    |
+| ---------------- | ------------------------------- |
+| Frontend         | React 18, Vite, Tailwind CSS    |
+| Backend          | Node.js, Express.js             |
+| Routing          | React Router                    |
+| HTTP Client      | Axios                           |
+| State Management | React Context API               |
+| Icons            | Lucide React                    |
+| Data Storage     | In-Memory JavaScript Data Store |
+
+---
+
+## 📁 Project Structure
+
+```text
 campusbites/
-├── server/              Express API
-│   ├── data/             menu.js, orders.js — in-memory stores
-│   ├── routes/           menu.js, orders.js — REST endpoints
+├── client/
+│   └── src/
+│       ├── components/
+│       ├── context/
+│       ├── pages/
+│       └── App.jsx
+│
+├── server/
+│   ├── data/
+│   ├── routes/
 │   └── index.js
-└── client/              React app (Vite)
-    └── src/
-        ├── components/   Header, MenuCard
-        ├── context/       CartContext (cart state + localStorage)
-        ├── pages/         Home, CartPage, Checkout, OrderHistory, Admin
-        └── App.jsx
+│
+└── README.md
 ```
 
-## Getting started
+---
 
-**Requirements:** Node.js 18+ and npm.
+## 🚀 Getting Started
 
-From the project root:
+### Prerequisites
+
+* Node.js (v18 or later)
+* npm
+
+### Install Dependencies
 
 ```bash
-npm run install-all   # installs server and client dependencies
-npm run dev           # runs backend (port 5000) and frontend (port 5173) together
+npm run install-all
 ```
 
-Then open **http://localhost:5173** in your browser.
-
-If you'd rather run them separately:
+### Run the Application
 
 ```bash
-cd server && npm install && npm start     # http://localhost:5000
-cd client && npm install && npm run dev   # http://localhost:5173
+npm run dev
 ```
 
-The Vite dev server proxies `/api/*` requests to the backend, so no extra
-configuration is needed in development.
+Frontend: `http://localhost:5173`
 
-## Features
+Backend: `http://localhost:5000`
 
-- **Menu** — browse dishes with search and category filters
-- **Cart** — add/remove items, adjust quantity, persists in the browser via localStorage
-- **Checkout** — place an order with a pickup name, get an instant confirmation
-- **Order history** — see all placed orders and their live status
-- **Admin dashboard** — passcode-gated (`canteen123` by default, change it in
-  `client/src/pages/Admin.jsx`) menu CRUD and order status updates
+To run the frontend and backend separately:
 
-## About the data layer
+```bash
+# Backend
+cd server
+npm install
+npm start
 
-To keep this easy to run with zero setup, menu items and orders are stored
-**in memory** on the server (`server/data/menu.js` and `server/data/orders.js`)
-— matching the sample code in the original report. Data resets when the
-server restarts.
+# Frontend
+cd client
+npm install
+npm run dev
+```
 
-To connect a real MongoDB database instead:
-1. `npm install mongoose --prefix server`
-2. Replace the array-based functions in `server/data/menu.js` and
-   `server/data/orders.js` with Mongoose models and queries
-3. Add a `.env` file with `MONGODB_URI=...` and load it with `dotenv` in
-   `server/index.js`
+---
 
-The routes in `server/routes/` don't need to change — they only call the
-functions your data layer exports.
+## ⚙️ Implementation Details
 
-## Future enhancements (from the original report)
+The modular backend architecture makes it straightforward to replace the current data layer with a persistent database such as MongoDB.
 
-- User authentication and login
-- Online payment integration (Razorpay/PayPal)
-- Real-time order tracking via WebSockets
-- PWA support for offline access
-- Ratings and feedback on dishes
-- Cloud deployment (AWS/Render)
+The application currently uses an **in-memory JavaScript data store**, where menu items and orders are stored in memory for simplicity and ease of setup. Consequently, all data is reset whenever the server restarts.
+
+
+---
+
+## 🎥 Demo
+
+> **Demo Video:** **
+
+---
+
+## 👩‍💻 My Contribution
+
+As part of the development team, my contributions included:
+
+* Developing responsive frontend interfaces using React and Tailwind CSS.
+* Implementing menu browsing, cart management, and checkout functionality.
+* Integrating frontend components with backend REST APIs using Axios.
+* Managing application state using React Context API.
+* Participating in testing, debugging, and overall application integration.
+
+---
+
+## 👥 Team Project
+
+CampusBites was developed as a collaborative academic mini project.
+
+This repository is maintained and published as part of my software engineering portfolio, showcasing the project's implementation and my individual contributions.
+
+
+---
+⭐ Thanks for stopping by! feedback and suggestions are always appreciated.
