@@ -123,7 +123,7 @@ As part of the development team, my contributions included:
 
 ## 👥 Team Project
 
-CampusBites was developed as a collaborative academic mini project.
+CampusBites was developed as a collaborative academic mini project.               
 
 This repository is maintained and published as part of my software engineering portfolio, showcasing the project's implementation and my individual contributions.
 
